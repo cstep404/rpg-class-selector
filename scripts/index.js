@@ -7,7 +7,7 @@ let currentQuestion = 0;
 
 const questionsObj = {
     1: "Your father tasks you with going to the market for a few items. He gives you a list and the coin to purchase the items. You head to the market and begin to look for the items on the list. Recently, the country, including your family has gone through some rough times. What do you do?",
-    2: "",
+    2: "Your walking through town, when you hear some yelling come from a nearby alley. You look down the alley and see two older kids bullying a younger kid. What do you do?",
     3: "",
     4: "",
     5: "",
@@ -25,7 +25,12 @@ const answersObj = {
         "c3": "Pocket the money and tell your father that with the country facing hardship, none of the items were available.",
         "c4": "Purchase some of the items on the list, but use the rest of the money to buy books on self-sustainability. Who knows if these hard times will get easier?"
     },
-    2: "",
+    2: {
+        "c1": "Rush to the young kids aid, throwing your fist into the first bullies face. You will not stand for this injustice.",
+        "c2": "Join the bullies in messing with the young kid. The kid must have deserved it, right?",
+        "c3": "Ask what's going on and try to diffuse the situation.",
+        "c4": "Yell at the bullies to distract them, letting the young kid escape."
+    },
     3: "",
     4: "",
     5: "",
@@ -43,6 +48,12 @@ const nextButtonGenerator = () => {
     choiceSelector.appendChild(nextButton);
     nextButton.addEventListener("click", (e) => {
         console.log(e.target);
+        questionTextRemover();
+        answerTextRemover();
+        currentQuestion += 1;
+        console.log(`currentQuestion: ${currentQuestion}`);
+        questionTextGenerator();
+        answerTextGenerator();
     });
 }
 
@@ -51,7 +62,7 @@ const questionTextGenerator = () => {
 }
 
 const questionTextRemover = () => {
-
+    questionSelector.textContent = "";
 }
 
 const answerTextGenerator = () => {
@@ -83,7 +94,7 @@ const answerTextGenerator = () => {
 }
 
 const answerTextRemover = () => {
-    
+    choiceSelector.textContent = "";
 }
 
 // generate the beginning text and start button
