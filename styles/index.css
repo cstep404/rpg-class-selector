@@ -4,11 +4,19 @@
 }
 
 body {
-    background-color: rgb(123, 123, 123);
+    background-color: rgb(84, 84, 84);
     color: rgb(255, 255, 255);
     font-size: 22px;
 }
 
 #main-container {
     margin: 1.0em;
+}
+
+#questions {
+
+}
+
+#choices {
+    margin-top: 1.0em;
 }
