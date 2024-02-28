@@ -8,3 +8,7 @@ body {
     color: rgb(255, 255, 255);
     font-size: 22px;
 }
+
+#main-container {
+    margin: 1.0em;
+}
