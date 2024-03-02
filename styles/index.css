@@ -20,3 +20,8 @@ body {
 #choices {
     margin-top: 1.0em;
 }
+
+p:hover {
+   background-color: green;
+   cursor: pointer;
+}

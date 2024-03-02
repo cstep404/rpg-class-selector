@@ -90,6 +90,22 @@ const answerTextGenerator = () => {
     choiceSelector.appendChild(choice3);
     choiceSelector.appendChild(choice4);
 
+    choice1.addEventListener("click", (e) => {
+        console.log(e.target);
+    });
+
+    choice2.addEventListener("click", (e) => {
+        console.log(e.target);
+    });
+
+    choice3.addEventListener("click", (e) => {
+        console.log(e.target);
+    });
+
+    choice4.addEventListener("click", (e) => {
+        console.log(e.target);
+    });
+
     nextButtonGenerator();
 }
 
