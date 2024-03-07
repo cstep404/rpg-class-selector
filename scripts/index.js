@@ -55,6 +55,15 @@ const questionTextRemover = () => {
     questionSelector.textContent = "";
 }
 
+const nextQuestion = () => {
+    questionTextRemover();
+    answerTextRemover();
+    currentQuestion += 1;
+    console.log(`currentQuestion: ${currentQuestion}`);
+    questionTextGenerator();
+    answerTextGenerator();
+}
+
 const answerTextGenerator = () => {
 
     // create 4 choices
@@ -85,43 +94,23 @@ const answerTextGenerator = () => {
 
     choice1.addEventListener("click", (e) => {
         console.log(e.target);
-        questionTextRemover();
-        answerTextRemover();
-        currentQuestion += 1;
-        console.log(`currentQuestion: ${currentQuestion}`);
-        questionTextGenerator();
-        answerTextGenerator();
+        nextQuestion();
 
     });
 
     choice2.addEventListener("click", (e) => {
         console.log(e.target);
-        questionTextRemover();
-        answerTextRemover();
-        currentQuestion += 1;
-        console.log(`currentQuestion: ${currentQuestion}`);
-        questionTextGenerator();
-        answerTextGenerator();
+        nextQuestion();
     });
 
     choice3.addEventListener("click", (e) => {
         console.log(e.target);
-        questionTextRemover();
-        answerTextRemover();
-        currentQuestion += 1;
-        console.log(`currentQuestion: ${currentQuestion}`);
-        questionTextGenerator();
-        answerTextGenerator();
+        nextQuestion();
     });
 
     choice4.addEventListener("click", (e) => {
         console.log(e.target);
-        questionTextRemover();
-        answerTextRemover();
-        currentQuestion += 1;
-        console.log(`currentQuestion: ${currentQuestion}`);
-        questionTextGenerator();
-        answerTextGenerator();
+        nextQuestion();
     });
 }
 
