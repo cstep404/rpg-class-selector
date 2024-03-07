@@ -7,9 +7,9 @@ let currentQuestion = 0;
 
 const questionsObj = {
     1: "Your father tasks you with going to the market for a few items. He gives you a list and the coin to purchase the items. You head to the market and begin to look for the items on the list. Recently, the country, including your family has gone through some rough times. What do you do?",
-    2: "Your walking through town, when you hear some yelling come from a nearby alley. You look down the alley and see two older kids bullying a younger kid. What do you do?",
-    3: "",
-    4: "",
+    2: "Your walking through town, when you hear some yelling come from a nearby alley. You look down the alley and see two men attacking another man. What do you do?",
+    3: "You're working for the local guild and sent to collect a rare and mysterious book. Apparently the book is hidden deep in a tower that is inhabited by bandits. After a relentless trek through the tower, you finally arrive at the library where the book is. As you approach the book, a man appears from the shadows and states the book is an old and ancient evil that should be destroyed. What do you do?",
+    4: "You're walking through the forest one day and stumble upon a hurt deer. Looking down at it's legs, you notice it is caught in a bear trap and hurt pretty badly. You know this isn't hunting season and is illegal. What next?",
     5: "",
     6: "",
     7: "",
@@ -43,20 +43,54 @@ const answersObj = {
             "wis": 1
         },
         "c2": {
-            "c2": "Yell at the bullies to distract them, letting the young kid escape.",
+            "c2": "Yell at the attackers to distract them, letting the other man escape.",
             "agi": 1
         },
         "c3": {
-            "c3": "Join the bullies in messing with the young kid. The kid must have deserved it, right?",
+            "c3": "Join the men in messing with the other man. The man must have done something to deserve it, right?",
             "int": 1
         },
         "c4": {
-            "c4": "Rush to the young kids aid, throwing your fist into the first bullies face. You will not stand for this injustice.",
+            "c4": "Rush to the man's aid, throwing your fist into the first attackers face. You will not stand for this injustice.",
             "str": 1
         }
     },
-    3: "",
-    4: "",
+    3: {
+        "c1": {
+            "c1": "Question the shadowy figure further. Where did this book come from and who is he?",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "In one swift action, grab the book and use your mysticism to render yourself invisible, then sneak out of the tower and back to the guild.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Ignore the shadowy figures warnings and grab the book. You will not be returning this to the guild. This knowledge is for your own power.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Grab the book and throw it to the ground. Then, raising your weapon attempt to destroy the book.",
+            "str": 1
+        }
+    },
+    4: {
+        "c1": {
+            "c1": "Using your knowlege of herbalism, collect enough plants to create a salve that will ease the deers pain and slowly send it to a forever sleep.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "Remark on the design and structure of the trap, You've seen these before. Attempt to disarm the trap, setting the deer free.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Using your knowlege of the arcane, cast an unlock spell on the trap and then channel a healing spell on the deer.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Using all your physical power, pull the trap apart using intense force, freeing the deer. Then in a fury of rage, track down the hunters responsible...",
+            "str": 1
+        }
+    },
     5: "",
     6: "",
     7: "",
