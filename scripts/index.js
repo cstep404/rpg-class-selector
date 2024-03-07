@@ -20,16 +20,40 @@ const questionsObj = {
 
 const answersObj = {
     1: {
-        "c1": "Do as your father asks and purchase the required items on the list.",
-        "c2": "Keep the money and steal the items when the vendors are distracted. Then return the money to your father. Surely, your father will understand?",
-        "c3": "Pocket the money and tell your father that with the country facing hardship, none of the items were available.",
-        "c4": "Purchase some of the items on the list, but use the rest of the money to buy books on self-sustainability. Who knows if these hard times will get easier?"
+        "c1": {
+            "c1": "Do as your father asks and purchase the required items on the list.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "Keep the money and steal the items when the vendors are distracted. Then return the money to your father. Surely, your father will understand?",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Pocket the money and tell your father that with the country facing hardship, none of the items were available.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Purchase some of the items on the list, but use the rest of the money to buy books on self-sustainability. Who knows if these hard times will get easier?",
+            "str": 1
+        }
     },
     2: {
-        "c1": "Rush to the young kids aid, throwing your fist into the first bullies face. You will not stand for this injustice.",
-        "c2": "Join the bullies in messing with the young kid. The kid must have deserved it, right?",
-        "c3": "Ask what's going on and try to diffuse the situation.",
-        "c4": "Yell at the bullies to distract them, letting the young kid escape."
+        "c1": {
+            "c1": "Ask what's going on and try to diffuse the situation.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "Yell at the bullies to distract them, letting the young kid escape.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Join the bullies in messing with the young kid. The kid must have deserved it, right?",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Rush to the young kids aid, throwing your fist into the first bullies face. You will not stand for this injustice.",
+            "str": 1
+        }
     },
     3: "",
     4: "",
@@ -42,10 +66,10 @@ const answersObj = {
 };
 
 // these counters are linked to the choices and increment based on the players decisions. they ultimate decide the class. ex. 10 strength = barbarian
-const strCounter = 0;
-const agiCounter = 0;
-const intCounter = 0;
-const wisCounter = 0;
+let wisCounter = 0;
+let agiCounter = 0;
+let intCounter = 0;
+let strCounter = 0;
 
 const questionTextGenerator = () => {
     questionSelector.textContent = questionsObj[currentQuestion];
@@ -62,6 +86,11 @@ const nextQuestion = () => {
     console.log(`currentQuestion: ${currentQuestion}`);
     questionTextGenerator();
     answerTextGenerator();
+
+    console.log(`wisCounter: ${wisCounter}`);
+    console.log(`agiCounter: ${agiCounter}`);
+    console.log(`intCounter: ${intCounter}`);
+    console.log(`strCounter: ${strCounter}`);
 }
 
 const answerTextGenerator = () => {
@@ -73,10 +102,10 @@ const answerTextGenerator = () => {
     const choice4 = document.createElement("p");
 
     // add the text content and styling to the choices
-    choice1.textContent = answersObj[currentQuestion].c1;
-    choice2.textContent = answersObj[currentQuestion].c2;
-    choice3.textContent = answersObj[currentQuestion].c3;
-    choice4.textContent = answersObj[currentQuestion].c4;
+    choice1.textContent = answersObj[currentQuestion].c1.c1;
+    choice2.textContent = answersObj[currentQuestion].c2.c2;
+    choice3.textContent = answersObj[currentQuestion].c3.c3;
+    choice4.textContent = answersObj[currentQuestion].c4.c4;
 
     choice1.style.padding = "16px";
     choice2.style.padding = "16px";
@@ -90,26 +119,30 @@ const answerTextGenerator = () => {
     choiceSelector.appendChild(choice4);
 
     // when a choice is clicked, it should go to  the next question
-    // when a choice is selected it should 
-
+    // when a choice is selected it should add to one of the core attributes. ie str
+    
+    // wis choice
     choice1.addEventListener("click", (e) => {
         console.log(e.target);
+        wisCounter += answersObj[currentQuestion].c1.wis;
         nextQuestion();
-
     });
-
+    // agi choice
     choice2.addEventListener("click", (e) => {
         console.log(e.target);
+        agiCounter += answersObj[currentQuestion].c2.agi;
         nextQuestion();
     });
-
+    // int choice
     choice3.addEventListener("click", (e) => {
         console.log(e.target);
+        intCounter += answersObj[currentQuestion].c3.int;
         nextQuestion();
     });
-
+    // str choice
     choice4.addEventListener("click", (e) => {
         console.log(e.target);
+        strCounter += answersObj[currentQuestion].c4.str;
         nextQuestion();
     });
 }
@@ -121,7 +154,7 @@ const answerTextRemover = () => {
 // generate the beginning text and start button
 
 const startGenerator = () => {
-    questionSelector.textContent = "Welcome to RPG Class Selector! Below will be various scenarios and you will be making a decision that you think is the best outcome. There are no right or wrong answers, simply choose the answer that you think fits best. At the end, your answers will be entered into our super secret algorithm that will select a class for you. Press start to begin, enjoy!"
+    questionSelector.textContent = "Welcome to RPG Class Selector! Below will be various scenarios and you will be making a decision that you think is the best outcome. There are no right or wrong answers, simply choose the answer that you think fits best. At the end, your answers will be entered into our super secret algorithm that will select a class for you. Press start to begin! Enjoy!"
 
     // create the start button
     const startButton = document.createElement("button");
@@ -145,5 +178,3 @@ const startGenerator = () => {
 
 // call the StartGenerator function
 startGenerator();
-
-console.log(`currentQuestion: ${currentQuestion}`);
