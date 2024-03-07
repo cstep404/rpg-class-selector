@@ -41,21 +41,11 @@ const answersObj = {
     10: "",
 };
 
-const nextButtonGenerator = () => {
-    const nextButton = document.createElement("button");
-    nextButton.textContent = "Next";
-    nextButton.style.padding = "10px";
-    choiceSelector.appendChild(nextButton);
-    nextButton.addEventListener("click", (e) => {
-        console.log(e.target);
-        questionTextRemover();
-        answerTextRemover();
-        currentQuestion += 1;
-        console.log(`currentQuestion: ${currentQuestion}`);
-        questionTextGenerator();
-        answerTextGenerator();
-    });
-}
+// these counters are linked to the choices and increment based on the players decisions. they ultimate decide the class. ex. 10 strength = barbarian
+const strCounter = 0;
+const agiCounter = 0;
+const intCounter = 0;
+const wisCounter = 0;
 
 const questionTextGenerator = () => {
     questionSelector.textContent = questionsObj[currentQuestion];
@@ -90,23 +80,49 @@ const answerTextGenerator = () => {
     choiceSelector.appendChild(choice3);
     choiceSelector.appendChild(choice4);
 
+    // when a choice is clicked, it should go to  the next question
+    // when a choice is selected it should 
+
     choice1.addEventListener("click", (e) => {
         console.log(e.target);
+        questionTextRemover();
+        answerTextRemover();
+        currentQuestion += 1;
+        console.log(`currentQuestion: ${currentQuestion}`);
+        questionTextGenerator();
+        answerTextGenerator();
+
     });
 
     choice2.addEventListener("click", (e) => {
         console.log(e.target);
+        questionTextRemover();
+        answerTextRemover();
+        currentQuestion += 1;
+        console.log(`currentQuestion: ${currentQuestion}`);
+        questionTextGenerator();
+        answerTextGenerator();
     });
 
     choice3.addEventListener("click", (e) => {
         console.log(e.target);
+        questionTextRemover();
+        answerTextRemover();
+        currentQuestion += 1;
+        console.log(`currentQuestion: ${currentQuestion}`);
+        questionTextGenerator();
+        answerTextGenerator();
     });
 
     choice4.addEventListener("click", (e) => {
         console.log(e.target);
+        questionTextRemover();
+        answerTextRemover();
+        currentQuestion += 1;
+        console.log(`currentQuestion: ${currentQuestion}`);
+        questionTextGenerator();
+        answerTextGenerator();
     });
-
-    nextButtonGenerator();
 }
 
 const answerTextRemover = () => {
