@@ -7,12 +7,12 @@ let currentQuestion = 0;
 
 const questionsObj = {
     1: "Your father tasks you with going to the market for a few items. He gives you a list and the coin to purchase the items. You head to the market and begin to look for the items on the list. Recently, the country, including your family has gone through some rough times. What do you do?",
-    2: "Your walking through town, when you hear some yelling come from a nearby alley. You look down the alley and see two men attacking another man. What do you do?",
+    2: "You're walking through town, when you hear some yelling come from a nearby alley. You look down the alley and see two men attacking another man. What do you do?",
     3: "You're working for the local guild and sent to collect a rare and mysterious book. Apparently the book is hidden deep in a tower that is inhabited by bandits. After a relentless trek through the tower, you finally arrive at the library where the book is. As you approach the book, a man appears from the shadows and states the book is an old and ancient evil that should be destroyed. What do you do?",
     4: "You're walking through the forest one day and stumble upon a hurt deer. Looking down at it's legs, you notice it is caught in a bear trap and hurt pretty badly. You know this isn't hunting season and is illegal. What next?",
-    5: "",
-    6: "",
-    7: "",
+    5: "You're trekking through a large city and notice a man fleeing from a large mob, which are yelling, as well as chasing the man with weapons and torches. You start to follow and at some point the mob corner the man. He's pleading for his innocence, claiming he didn't do it. What do you do?",
+    6: "You're part of the local city council, debating an intense issue. One of the council members is currently giving their opinion on the issue. Midway through their statement, the council leader slams down his gavel and states that the idea is preposterous and ends their turn. What's your next course of action?",
+    7: "While riding through the woods, you see smoke in the distance. Upon getting closer you see a town under seige by a pack of orcs. Galloping even, closer you see little resistance from the townsfolk. They seem to be a simple farming community. What next?",
     8: "",
     9: "",
     10: "",
@@ -91,12 +91,114 @@ const answersObj = {
             "str": 1
         }
     },
-    5: "",
-    6: "",
-    7: "",
-    8: "",
-    9: "",
-    10: "",
+    5: {
+        "c1": {
+            "c1": "Knowing the potential chaos an unruly mob can descend into, calmly raise your voice and state the man deserves a fair trial, guilt cannot be determined by a groups wrath.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "Since half the city is gathered around the man, use this opportunity to pillage the stands of the various vendors. A little extra coin and items go a long way.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Grab the man and weave a teleportation spell to the nearest safe location. The mob is simply too unruly to decide a mans fate.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Putting your faith in the man, quickly sprint in front of the man, shielding him. Knowing that your strength is unmatched and you welcome any takers.",
+            "str": 1
+        }
+    },
+    6: {
+        "c1": {
+            "c1": "From your past dealings with the council leader, you know he is stubborn and bullheaded. Appeal to his sense of order, stating as much as he may disagree with another members opinion, the council must maintain a sense of decorum.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "As you're familiar with the ways of the council and the leaders 'under the table' dealings with a local guild, whisper in the leader's ear and let him know that this information will be shared unless he lets the other council member continue their statement.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "From memory, recite the section of the council ordinance that every member deserves their fair turn when speaking on important issues.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Hurdle over the table, grab the leader's gavel and smash it to pieces. Every member deserves the same rights to speak on how they see the issue.",
+            "str": 1
+        }
+    },
+    7: {
+        "c1": {
+            "c1": "There's simply too many orcs for you to take on your own. Ride for the next nearest town and rally the militia, praying that when you return it's not too late.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "Sneak through the town, locate, and assassinate the orc leader. Knowing that once it's killed, the rest of the orcs should flee, as they are cowards.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Gallop towrds the orcs and cast a crowd control spell on them, followed by various elemental magics. This will let the towns people flee while you continue to fight.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Hop off your horse,, pull out your greatsword,  and charge the orcs. You've been itching for a battle.",
+            "str": 1
+        }
+    },
+    8: {
+        "c1": {
+            "c1": "Knowing the potential chaos an unruly mob can descend into, calmly raise your voice and state the man deserves a fair trial, guilt cannot be determined by a groups wrath.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "Since half the city is gathered around the man, use this opportunity to pillage the stands of the various vendors. A little extra coin and items go a long way.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Grab the man and weave a teleportation spell to the nearest safe location. The mob is simply too unruly to decide a mans fate.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Putting your faith in the man, quickly sprint in front of the man, shielding him. Knowing that your strength is unmatched and you welcome any takers.",
+            "str": 1
+        }
+    },
+    9: {
+        "c1": {
+            "c1": "Knowing the potential chaos an unruly mob can descend into, calmly raise your voice and state the man deserves a fair trial, guilt cannot be determined by a groups wrath.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "Since half the city is gathered around the man, use this opportunity to pillage the stands of the various vendors. A little extra coin and items go a long way.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Grab the man and weave a teleportation spell to the nearest safe location. The mob is simply too unruly to decide a mans fate.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Putting your faith in the man, quickly sprint in front of the man, shielding him. Knowing that your strength is unmatched and you welcome any takers.",
+            "str": 1
+        }
+    },
+    10: {
+        "c1": {
+            "c1": "Knowing the potential chaos an unruly mob can descend into, calmly raise your voice and state the man deserves a fair trial, guilt cannot be determined by a groups wrath.",
+            "wis": 1
+        },
+        "c2": {
+            "c2": "Since half the city is gathered around the man, use this opportunity to pillage the stands of the various vendors. A little extra coin and items go a long way.",
+            "agi": 1
+        },
+        "c3": {
+            "c3": "Grab the man and weave a teleportation spell to the nearest safe location. The mob is simply too unruly to decide a mans fate.",
+            "int": 1
+        },
+        "c4": {
+            "c4": "Putting your faith in the man, quickly sprint in front of the man, shielding him. Knowing that your strength is unmatched and you welcome any takers.",
+            "str": 1
+        }
+    },
 };
 
 // these counters are linked to the choices and increment based on the players decisions. they ultimate decide the class. ex. 10 strength = barbarian
