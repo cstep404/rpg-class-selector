@@ -13,8 +13,8 @@ const questionsObj = {
     5: "You're trekking through a large city and notice a man fleeing from a large mob, which are yelling, as well as chasing the man with weapons and torches. You start to follow and at some point the mob corner the man. He's pleading for his innocence, claiming he didn't do it. What do you do?",
     6: "You're part of the local city council, debating an intense issue. One of the council members is currently giving their opinion on the issue. Midway through their statement, the council leader slams down his gavel and states that the idea is preposterous and ends their turn. What's your next course of action?",
     7: "While riding through the woods, you see smoke in the distance. Upon getting closer you see a town under seige by a pack of orcs. Galloping even, closer you see little resistance from the townsfolk. They seem to be a simple farming community. What next?",
-    8: "",
-    9: "",
+    8: "You're sitting in your weekly spellcasting class. Your professor begins to cast a spell from a leather bound book, uttering a chant that chills you to the bone. Afterwards, he states that the spell was dark magic and should never be used, unless by an experienced spell caster. He prompty takes the book and puts it back into a drawer in his desk, locking it and putting the key in his pocket.",
+    9: "It had been a cold winter and it looks as though a large oak tree was killed because of it. Your father has tasked you with removing it. How do you go about doing so?",
     10: "",
 };
 
@@ -133,7 +133,7 @@ const answersObj = {
             "wis": 1
         },
         "c2": {
-            "c2": "Sneak through the town, locate, and assassinate the orc leader. Knowing that once it's killed, the rest of the orcs should flee, as they are cowards.",
+            "c2": "Sneak through the town, locate, and assassinate the orc leader, as you know that orcs morale shatters once their leader is killed.",
             "agi": 1
         },
         "c3": {
@@ -147,37 +147,37 @@ const answersObj = {
     },
     8: {
         "c1": {
-            "c1": "Knowing the potential chaos an unruly mob can descend into, calmly raise your voice and state the man deserves a fair trial, guilt cannot be determined by a groups wrath.",
+            "c1": "You've read about this spell before and understand the serious implications of using it. You heed your professors advice and remind yourself that you're merely an apprentice. You're not ready.",
             "wis": 1
         },
         "c2": {
-            "c2": "Since half the city is gathered around the man, use this opportunity to pillage the stands of the various vendors. A little extra coin and items go a long way.",
+            "c2": "Waiting until the cover of night, you make your way to your professors domitory. You silently lockpick the door and sneak into his room. There, you begin to search for the key. Upon locating the cloak he was wearing earlier, you find the key, slowly sneak out of the room and head for the classroom. You will have that book, not because you care about that spell, but because of the coin from fencing that book...",
             "agi": 1
         },
         "c3": {
-            "c3": "Grab the man and weave a teleportation spell to the nearest safe location. The mob is simply too unruly to decide a mans fate.",
+            "c3": "You question the professor, stating that everyone should see the spell in action again in order to understand it better and prevent it's misuse. You ask the professor if he could explain the book and it's origins, as it has greatly piqued your interest.",
             "int": 1
         },
         "c4": {
-            "c4": "Putting your faith in the man, quickly sprint in front of the man, shielding him. Knowing that your strength is unmatched and you welcome any takers.",
+            "c4": "Heeding the words of the professor, ask him to show you how that spell can be defended against and what other defensive techniques could be used to avoid it's evil.",
             "str": 1
         }
     },
     9: {
         "c1": {
-            "c1": "Knowing the potential chaos an unruly mob can descend into, calmly raise your voice and state the man deserves a fair trial, guilt cannot be determined by a groups wrath.",
+            "c1": "Study the tree, examining the bark and branches. Upon further inspection, you realize the tree is not actually dead, just dormant. It simply needs more time than usual for it's leaves to begin growing.",
             "wis": 1
         },
         "c2": {
-            "c2": "Since half the city is gathered around the man, use this opportunity to pillage the stands of the various vendors. A little extra coin and items go a long way.",
+            "c2": "Lie to your father and say you've removed the dead tree. Then steal some coins from his wallet and use them to pay someone else to take care of the tree. You've got better things to do.",
             "agi": 1
         },
         "c3": {
-            "c3": "Grab the man and weave a teleportation spell to the nearest safe location. The mob is simply too unruly to decide a mans fate.",
+            "c3": "Remembering your mother has an old book on botany and dendrology, get to work studying the text. After some time, you work on concocting a potion that will slowly cause the tree to wither into nothing.",
             "int": 1
         },
         "c4": {
-            "c4": "Putting your faith in the man, quickly sprint in front of the man, shielding him. Knowing that your strength is unmatched and you welcome any takers.",
+            "c4": "Do it the old fashioned way. Grab your father's old great axe and get to work chopping down the tree. No doubt the wood will also come in handy for the next winter's fires.",
             "str": 1
         }
     },
