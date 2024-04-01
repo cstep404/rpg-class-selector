@@ -15,7 +15,7 @@ const questionsObj = {
     7: "While riding through the woods, you see smoke in the distance. Upon getting closer you see a town under seige by a pack of orcs. Galloping even, closer you see little resistance from the townsfolk. They seem to be a simple farming community. What next?",
     8: "You're sitting in your weekly spellcasting class. Your professor begins to cast a spell from a leather bound book, uttering a chant that chills you to the bone. Afterwards, he states that the spell was dark magic and should never be used, unless by an experienced spell caster. He prompty takes the book and puts it back into a drawer in his desk, locking it and putting the key in his pocket.",
     9: "It had been a cold winter and it looks as though a large oak tree was killed because of it. Your father has tasked you with removing it. How do you go about doing so?",
-    10: "",
+    10: "While in a local tavern, you overhear a conversation between two men. They're discussing a potential uprising in the next few days and goals of displacing the current king. How do you proceed?",
 };
 
 const answersObj = {
@@ -183,19 +183,19 @@ const answersObj = {
     },
     10: {
         "c1": {
-            "c1": "Knowing the potential chaos an unruly mob can descend into, calmly raise your voice and state the man deserves a fair trial, guilt cannot be determined by a groups wrath.",
+            "c1": "Continue to listen to the conversation, fully studying and taking in the details. You'll need to hear every bit in order to lay out a strategy to avoid the uprising.",
             "wis": 1
         },
         "c2": {
-            "c2": "Since half the city is gathered around the man, use this opportunity to pillage the stands of the various vendors. A little extra coin and items go a long way.",
+            "c2": "Using your skills in deception and trickery, engage in conversation with the men, pretending you are a fellow rebel. After you've gained their trust, lure them into the nearest alley where they can be interrogated further.",
             "agi": 1
         },
         "c3": {
-            "c3": "Grab the man and weave a teleportation spell to the nearest safe location. The mob is simply too unruly to decide a mans fate.",
+            "c3": "Using your intelligence, start a conversation with the men in order to gather critical intel on the potential uprising. If you can find out the location of the cult, you can potentially stop this uprising.",
             "int": 1
         },
         "c4": {
-            "c4": "Putting your faith in the man, quickly sprint in front of the man, shielding him. Knowing that your strength is unmatched and you welcome any takers.",
+            "c4": "Confront the two men, letting them know you will be detaining them and alerting the nearest guards to this treachery.",
             "str": 1
         }
     },
