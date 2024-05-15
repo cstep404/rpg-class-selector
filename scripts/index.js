@@ -219,14 +219,16 @@ const nextQuestion = () => {
     questionTextRemover();
     answerTextRemover();
     currentQuestion += 1;
-    console.log(`currentQuestion: ${currentQuestion}`);
-    questionTextGenerator();
-    answerTextGenerator();
-
-    console.log(`wisCounter: ${wisCounter}`);
-    console.log(`agiCounter: ${agiCounter}`);
-    console.log(`intCounter: ${intCounter}`);
-    console.log(`strCounter: ${strCounter}`);
+    if (currentQuestion != 11) {
+        console.log(`currentQuestion: ${currentQuestion}`);
+        questionTextGenerator();
+        answerTextGenerator();
+        console.log(`wisCounter: ${wisCounter}`);
+        console.log(`agiCounter: ${agiCounter}`);
+        console.log(`intCounter: ${intCounter}`);
+        console.log(`strCounter: ${strCounter}`);
+    }
+    
 }
 
 const answerTextGenerator = () => {
