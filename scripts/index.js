@@ -2,6 +2,7 @@
 const mainSelector = document.querySelector("#main-container");
 const questionSelector = document.querySelector("#questions");
 const choiceSelector = document.querySelector("#choices");
+const classChoiceSelector = document.querySelector("#class-choice");
 
 // counts the current question
 let currentQuestion = 0;
@@ -231,6 +232,11 @@ const nextQuestion = () => {
         console.log(`agiCounter: ${agiCounter}`);
         console.log(`intCounter: ${intCounter}`);
         console.log(`strCounter: ${strCounter}`);
+    } else {
+        console.log(`wisCounter: ${wisCounter}`);
+        console.log(`agiCounter: ${agiCounter}`);
+        console.log(`intCounter: ${intCounter}`);
+        console.log(`strCounter: ${strCounter}`);
     }
     
 }
@@ -297,6 +303,42 @@ const answerTextRemover = () => {
     choiceSelector.textContent = "";
 }
 
+// calculate stats and display players chosen class based on their selections
+const showClassChoice = () => {
+
+    console.log("WERE SHOWING THE CLASSIC CHOICE SCREEN!")
+    // display current counters in the console
+    console.log(`wis: ${wisCounter}`);
+    console.log(`agi: ${agiCounter}`);
+    console.log(`int: ${intCounter}`);
+    console.log(`str: ${strCounter}`);
+
+    // create display counters as paragraph elements
+    const wisCounterDisplay = document.createElement("p");
+    const agiCounterDisplay = document.createElement("p");
+    const intCounterDisplay = document.createElement("p");
+    const strCounterDisplay = document.createElement("p");
+
+    // set the text content of the CounterDisplays to the value
+    wisCounterDisplay.textContent = wisCounter;
+    agiCounterDisplay.textContent = agiCounter;
+    intCounterDisplay.textContent = intCounter;
+    strCounterDisplay.textContent = strCounter;
+
+    // style the display counters
+    wisCounterDisplay.style.padding = "16px";
+    agiCounterDisplay.style.padding = "16px";
+    intCounterDisplay.style.padding = "16px";
+    strCounterDisplay.style.padding = "16px";
+
+    // append display counters to the main container
+    classChoiceSelector.appendChild(wisCounterDisplay);
+    classChoiceSelector.appendChild(agiCounterDisplay);
+    classChoiceSelector.appendChild(intCounterDisplay);
+    classChoiceSelector.appendChild(strCounterDisplay);
+
+}
+
 // generate the beginning text and start button
 
 const startGenerator = () => {
@@ -324,3 +366,8 @@ const startGenerator = () => {
 
 // call the StartGenerator function
 startGenerator();
+
+if (currentQuestion >= 11) {
+    console.log(`current question EQUALS 11: ${currentQuestion}`)
+    showClassChoice();
+}
