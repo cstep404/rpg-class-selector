@@ -3,6 +3,7 @@ const mainSelector = document.querySelector("#main-container");
 const questionSelector = document.querySelector("#questions");
 const choiceSelector = document.querySelector("#choices");
 
+// counts the current question
 let currentQuestion = 0;
 
 const questionsObj = {
@@ -207,14 +208,17 @@ let agiCounter = 0;
 let intCounter = 0;
 let strCounter = 0;
 
+// generates text for each question
 const questionTextGenerator = () => {
     questionSelector.textContent = questionsObj[currentQuestion];
 }
 
+// removes text after every choice
 const questionTextRemover = () => {
     questionSelector.textContent = "";
 }
 
+// clears the current text content and generates new text. also increments the stat counter
 const nextQuestion = () => {
     questionTextRemover();
     answerTextRemover();
@@ -233,24 +237,25 @@ const nextQuestion = () => {
 
 const answerTextGenerator = () => {
 
-    // create 4 choices
+    // create 4 choices, setting the choice variable to a created paragraph element
     const choice1 = document.createElement("p");
     const choice2 = document.createElement("p");
     const choice3 = document.createElement("p");
     const choice4 = document.createElement("p");
 
-    // add the text content and styling to the choices
+    // add each potential answer from the answers object as text content
     choice1.textContent = answersObj[currentQuestion].c1.c1;
     choice2.textContent = answersObj[currentQuestion].c2.c2;
     choice3.textContent = answersObj[currentQuestion].c3.c3;
     choice4.textContent = answersObj[currentQuestion].c4.c4;
 
+    // add styling to the choices
     choice1.style.padding = "16px";
     choice2.style.padding = "16px";
     choice3.style.padding = "16px";
     choice4.style.padding = "16px";
 
-    // append the choices
+    // append the choices to the choice div
     choiceSelector.appendChild(choice1);
     choiceSelector.appendChild(choice2);
     choiceSelector.appendChild(choice3);
@@ -258,6 +263,8 @@ const answerTextGenerator = () => {
 
     // when a choice is clicked, it should go to  the next question
     // when a choice is selected it should add to one of the core attributes. ie str
+
+    // each choice has an event listener which when clicked in the UI, increments the selected stat by 1, then goes to the next question
     
     // wis choice
     choice1.addEventListener("click", (e) => {
@@ -285,6 +292,7 @@ const answerTextGenerator = () => {
     });
 }
 
+// removes answer text content
 const answerTextRemover = () => {
     choiceSelector.textContent = "";
 }
